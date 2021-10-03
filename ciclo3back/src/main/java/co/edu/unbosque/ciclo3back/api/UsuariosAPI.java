@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unbosque.ciclo3back.dao.UsuariosDAO;
+import co.edu.unbosque.ciclo3back.model.Proveedores;
 import co.edu.unbosque.ciclo3back.model.Usuarios;
 
 @RestController //esta es una clase REST
@@ -44,5 +45,14 @@ public class UsuariosAPI {
 	{
 		DAO.save(usuarios);
 	}
+	
+	/*@GetMapping("/validar")
+	public List<Usuarios> validar(@PathVariable("Usuario") String Usuario, @PathVariable("Password") String Password)
+	{
+		Usuarios usuario = new Usuarios();
+		usuario.setUsuario(Usuario);
+		usuario.setPassword(Password);
+		boolean Existe = return DAO.exists(usuario);
+	}*/
 	
 }
